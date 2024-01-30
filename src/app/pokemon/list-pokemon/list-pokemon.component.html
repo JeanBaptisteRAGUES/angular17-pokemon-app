@@ -1,0 +1,55 @@
+<div class=' w-full h-[95%] flex flex-col items-center justify-start bg-slate-700'>
+    <app-search-pokemon></app-search-pokemon>
+    <div class="flex flex-row justify-around items-center flex-wrap gap-5 py-5 overflow-x-hidden w-full">
+        <div *ngFor='let pokemon of pokemonList' class="col s6 m4">
+            <!-- <div class="card horizontal" (click)="goToPokemon(pokemon)" pkmnBorderCard="cyan" >
+                <div class="card-image">
+                    <img [src]="pokemon.picture">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <p>{{ pokemon.name }}</p>
+                        <p><small>{{ pokemon.created }}</small></p>
+                        <span 
+                            *ngFor="let type of pokemon.types" 
+                            class="{{ type | pokemonTypeColor }}"
+                        >
+                            {{ type }}
+                        </span>
+                    </div>
+                </div>
+            </div> -->
+            <p-card header={{pokemon.name}} subheader={{pokemon.created}} [style]="{ width: '300px' }">
+                <ng-template pTemplate="header">
+                    <img alt="Card" src={{pokemon.picture}} />
+                </ng-template>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                </p>
+                <ng-template pTemplate="footer">
+                    <span 
+                        *ngFor="let type of pokemon.types" 
+                        class="rounded-lg m-2 p-1 text-white"
+                        [ngStyle]="type | pokemonTypeColor"
+                    >
+                        {{ type }}
+                    </span>
+                    <!-- <span 
+                        *ngFor="let type of pokemon.types" 
+                        class="{{ type | pokemonTypeColor }}"
+                    >
+                        {{ type }}
+                    </span> -->
+                </ng-template>
+            </p-card>
+        </div>
+    </div>
+</div>
+
+<a 
+    class="bg-teal-600 rounded-full text-white no-underline font-extrabold text-5xl h-10 w-10 flex justify-center items-end"
+    style="position: fixed; bottom: 25px; right: 25px;"
+    routerLink="/pokemon/add"
+>
+ +
+</a>

@@ -1,0 +1,36 @@
+<!-- Chapitre 10 : Effectuer des requêtes HTTP standards -->
+<!-- On met un $ à la fin de pokemons pour indiquer que c'est un flux de données -->
+<!-- async permet de remplacer ngOnInit(): { this.pokemons$.subscribe(pokemons => this.pokemons = pokemons); } -->
+<div class="w-full flex justify-center items-center py-5">
+  <p-card header="">
+    <!-- <p-autoComplete [(ngModel)]="selectedItem" [suggestions]="suggestions" (completeMethod)="search($event)"></p-autoComplete> -->
+    <div class="input-field">
+      <input #searchBox (keyup)="search(searchBox.value)"
+        placeholder="Rechercher un pokémon"/>
+    </div>
+
+    <div class="collection">
+      <a *ngFor="let pokemon of pokemons$ | async"
+        (click)="goToDetail(pokemon)" class="collection-item">
+        {{ pokemon.name }}
+      </a>
+    </div>
+  </p-card>
+    <!-- <div class="col s12 m6 offset-m3">
+      <div class="card">
+        <div class="card-content">
+          <div class="input-field">
+            <input #searchBox (keyup)="search(searchBox.value)"
+              placeholder="Rechercher un pokémon"/>
+          </div>
+    
+          <div class="collection">
+            <a *ngFor="let pokemon of pokemons$ | async"
+              (click)="goToDetail(pokemon)" class="collection-item">
+              {{ pokemon.name }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </div>

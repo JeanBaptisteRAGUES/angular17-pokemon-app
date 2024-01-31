@@ -1,6 +1,14 @@
 <h1>Angular 17 HttpClient for Sending Http Request Example - ItSolutionStuff.com</h1>
   
-<ul class="list-group">
+<ul class="w-full flex flex-col justify-start items-start bg-red-300">
+  <li 
+      *ngFor="let post of postsObservables | async"
+      class="list-group-item">
+      {{ post.title }}
+  </li>
+</ul>
+
+<ul class="w-full flex flex-col justify-start items-start bg-green-300">
   <li 
       *ngFor="let post of posts"
       class="list-group-item">

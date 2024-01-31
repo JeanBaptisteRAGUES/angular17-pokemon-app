@@ -8,11 +8,14 @@ import { PokemonTypeColorPipe } from '../pokemon-type-color.pipe';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoaderComponent } from '../../loader/loader.component';
+import { InputTextModule } from 'primeng/inputtext';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-pokemon-form',
   standalone: true,
-  imports: [CommonModule, FormsModule, LoaderComponent, PokemonTypeColorPipe],
+  imports: [ButtonModule, CommonModule, FormsModule, InputNumberModule, InputTextModule, LoaderComponent, PokemonTypeColorPipe],
   templateUrl: './pokemon-form.component.html',
   styleUrls: ['./pokemon-form.component.css'],
 })

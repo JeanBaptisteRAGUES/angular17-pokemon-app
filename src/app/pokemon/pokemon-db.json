@@ -25,9 +25,9 @@
     },
     {
       "id": "3",
-      "name": "Carapuce",
-      "hp": 21,
-      "cp": 4,
+      "name": "Carapute",
+      "hp": 210,
+      "cp": 40,
       "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/007.png",
       "types": [
         "Eau"
@@ -137,24 +137,11 @@
       "created": "22/01/2024"
     },
     {
-      "id": "980a",
-      "name": "Bonobo",
-      "hp": 666,
-      "cp": 66,
-      "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/111.png",
-      "types": [
-        "Feu",
-        "Insecte",
-        "Plante"
-      ],
-      "created": "2024-01-25T18:00:54.601Z"
-    },
-    {
       "id": "bc4c",
       "name": "MacronDemission",
       "hp": 555,
       "cp": 10,
-      "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/333.png",
+      "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/233.png",
       "types": [
         "Insecte",
         "Poison",
@@ -174,6 +161,19 @@
         "Psy"
       ],
       "created": "2024-01-25T18:23:02.632Z"
+    },
+    {
+      "id": "68a5",
+      "name": "Pompidou",
+      "hp": 55,
+      "cp": 13,
+      "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/206.png",
+      "types": [
+        "Normal",
+        "Insecte",
+        "Eau"
+      ],
+      "created": "2024-01-31T01:47:35.055Z"
     }
   ]
 }

@@ -10,8 +10,8 @@ body {
     position: relative;
     width: 100vw;
     height: 100vh;
-    background-color: magenta; /* Pour détecter les zones pas bien couvertes par le contenu de la page */
-    /* overflow: hidden; */
+    background-color: slategray;
+    overflow-x: hidden;
     box-sizing: border-box;
     margin: 0%;
     padding: 0%;

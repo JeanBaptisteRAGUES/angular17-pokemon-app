@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { PostService } from '../post.service';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-list-post',
@@ -12,14 +13,17 @@ import { RouterOutlet } from '@angular/router';
 })
 export class ListPostComponent {
   posts:any;
+  postsObservables: Observable<any>;
   
-    constructor(private service:PostService) {}
-  
-    ngOnInit() {
-  
-      this.service.getPosts()
-        .subscribe(response => {
-          this.posts = response;
-        });
+  constructor(private service:PostService) {}
+
+  ngOnInit() {
+
+    this.postsObservables = this.service.getPosts();
+
+    this.service.getPosts()
+      .subscribe(response => {
+        this.posts = response;
+      });
   }
 }

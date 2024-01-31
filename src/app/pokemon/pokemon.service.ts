@@ -21,13 +21,6 @@ export class PokemonService {
     );
   }
 
-  testGetPokemonList(): Pokemon[] {
-    const pokemons = POKEMONS;
-    console.log('Liste des pokémons depuis la bdd :');
-    console.table(this.http.get(this.URL));
-    return pokemons;
-  }
-
   getPokemonById(pokemonId: string): Observable<Pokemon|undefined> {
     return this.http.get<Pokemon>(`${this.URL}/${pokemonId}`).pipe(
       tap((pokemonResponse) => this.log(pokemonResponse)),

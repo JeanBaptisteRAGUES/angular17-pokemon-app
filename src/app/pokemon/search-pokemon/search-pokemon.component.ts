@@ -6,11 +6,12 @@ import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { CardModule } from 'primeng/card';
 import { AutoCompleteModule } from 'primeng/autocomplete';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-search-pokemon',
   standalone: true,
-  imports: [AutoCompleteModule, CardModule, CommonModule],
+  imports: [AutoCompleteModule, CardModule, CommonModule, FormsModule],
   providers: [PokemonService],
   templateUrl: './search-pokemon.component.html',
   styles: [
